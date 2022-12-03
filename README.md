@@ -4,7 +4,13 @@
 =============
 
 + Day 1
+    - part 1
+    - part 2
 + Day 2
+    - part 1
+    - part 2
 + Day 3
+    - part 1
+    - part 2
 
 Link: [Advent of Code](https://adventofcode.com/2022/)
