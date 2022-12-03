@@ -18,12 +18,7 @@ with open("input.txt", "r") as f1:
             total += priority.index(repeated) + 1
 
 
-            group_list = []
-        
-
-        
-
-        
+            group_list = []        
 
 print(total)
 
