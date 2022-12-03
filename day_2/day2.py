@@ -11,8 +11,6 @@ def defeat(op, you):
         return "lost"
 
 
-
-
 total = 0
 
 with open("input.txt", "r") as f1:
