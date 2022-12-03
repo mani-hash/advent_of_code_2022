@@ -1,6 +1,7 @@
 ### Advent of Code 2022
 
-##### Completed:
+### Completed:
+=============
 
 + Day 1
 + Day 2
