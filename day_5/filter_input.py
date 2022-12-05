@@ -10,12 +10,10 @@ with open("input.txt", "r") as f1:
         if (line == "\n"):
             stage += 1
             continue
-
         if (stage == 0):
             temp_stack.append(line.replace("\n", ""))
         else:
             commands.append(line.strip().replace("move ", "").replace("from ", "").replace("to ", "").split(" "))
-            # print(commands[0])
 
 
 del temp_stack[-1]  #delete unnecesary part of list
@@ -26,15 +24,11 @@ start = 0
 prog = 3
 STEP = 4
 
-# print(len(temp_stack))
-
 #filter crates to useable manner
 for i in range(0, 8):
     sub_stack.append([]) 
     for k in range(0, 9):
-        # print(start, prog)
         sub_stack[i].append(temp_stack[i][start:prog].strip())
-        # print(main_stack[int(i)-1])
         start += STEP
         prog += STEP
     prog = 3
