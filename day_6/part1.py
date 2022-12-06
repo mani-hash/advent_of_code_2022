@@ -11,8 +11,5 @@ def find_buff(chk_num):
                 print(count)
                 break
             
-                
-
-
 find_buff(4)
 
