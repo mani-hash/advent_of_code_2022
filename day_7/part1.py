@@ -1,7 +1,6 @@
 dir = {}
 total = 0
 
-
 def fold_sep(root, inp):
     cur_dir = inp[root]["dir"]
     total = 0
@@ -11,9 +10,6 @@ def fold_sep(root, inp):
         total += inp[root + "," + dir]["size"]
 
     return total
-
-        
-
 
 with open("input.txt", "r") as f1:
     data = f1.read().splitlines()
@@ -29,9 +25,7 @@ with open("input.txt", "r") as f1:
             dir[work_dir]["dir"] = []
             dir[work_dir]["size"] = 0
         elif ("$ ls" in i):
-            store = 1
-            
-        
+            continue
         else:
             if ("dir" in i):
                 
@@ -39,18 +33,13 @@ with open("input.txt", "r") as f1:
             else:
                 dir[work_dir]["size"] += int(i.split(" ")[0])
 
-
 for x in dir:
     if (len(dir[x]["dir"]) != 0):
         value = fold_sep(x, dir) + dir[x]["size"]
     else:
         value = dir[x]["size"]
-        
     if (value <= 100000):
         total+=value
 
 if __name__ == "__main__":
     print(total)
-
-
-
