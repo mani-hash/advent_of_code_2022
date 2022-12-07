@@ -20,5 +20,8 @@
 + Day 6
     - part 1
     - part 2
++ Day 7
+    - part 1
+    - part 2
 
 Link: [Advent of Code](https://adventofcode.com/2022/)
