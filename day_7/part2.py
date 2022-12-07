@@ -17,16 +17,18 @@ for x in direc:
 
 candidate.sort(reverse=True)
 used_space = candidate[0]
-avail_space = t_disk - used_space
-
-small = candidate[0]
-
-for y in range(1, len(candidate)):
-    if (avail_space + small >= space_need):
-        if (avail_space + candidate[y]) < (avail_space + small):
-            small = candidate[y]
+max_space = t_disk - space_need
 
 
-# print(avail_space)
-# print(candidate)
-print(small)
+free = 0
+
+for i in range(1, len(candidate)):
+    if (used_space - candidate[i] <= max_space):
+        free = candidate[i]
+
+
+
+print(free)
+
+
+
