@@ -1,21 +1,14 @@
 dir = {}
 total = 0
-candidate = []
-
 
 def fold_sep(root, inp):
     cur_dir = inp[root]["dir"]
-    # print(inp[root]["size"])
     total = 0
     for dir in cur_dir:
         if (len(inp[root + "," + dir]["dir"]) != 0):
             total += fold_sep(root + "," + dir, inp)
         total += inp[root + "," + dir]["size"]
-
     return total
-
-        
-
 
 with open("input.txt", "r") as f1:
     data = f1.read().splitlines()
@@ -46,21 +39,10 @@ for x in dir:
     print(x, "=>", dir[x])
     if (len(dir[x]["dir"]) != 0):
         value = fold_sep(x, dir) + dir[x]["size"]
-        
     else:
         value = dir[x]["size"]
-        
-    candidate.append(value)
-        
     if (value <= 100000):
         total+=value
 
 if __name__ == "__main__":
     print(total)
-# candidate.sort(reverse=True)
-# print(candidate)
-
-# print(fold_sep(",/", dir) + dir[",/"]["size"])
-
-
-
