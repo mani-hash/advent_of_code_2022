@@ -22,13 +22,11 @@ def tail_move(H_pos, T_pos):
     ty = T_pos[1]
     hx = H_pos[0]
     hy = H_pos[1]
-
     if (tx == hx): #x axis are same (upwards or downward)
         if (hy > ty):
             return [tx, ty+1]
         else:
             return [tx, ty-1]
-
     elif (ty == hy): #y axis are same (left or right)
         if (hx > tx):
             return [tx+1, ty]
@@ -36,7 +34,6 @@ def tail_move(H_pos, T_pos):
             return [tx-1, ty]
     else: 
         if (hx > tx): #right side
-            
             if (hy > ty): 
                 return [tx+1, ty+1]
             else:
