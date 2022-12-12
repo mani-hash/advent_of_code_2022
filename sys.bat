@@ -1,0 +1,1 @@
+for /l %%x in (2, 1, 8) do move day_%%x day_0%%x
