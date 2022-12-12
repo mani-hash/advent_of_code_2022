@@ -20,7 +20,13 @@
 + Day 6
     - part 1
     - part 2
-+ Day 7
++ Day 8
+    - part 1
+    - part 2
++ Day 9
+    - part 1
+    - part 2
++ Day 10
     - part 1
     - part 2
 
